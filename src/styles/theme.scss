@@ -1,0 +1,28 @@
+/* 去掉form item的下边距 */
+.ant-form-item {
+  margin-bottom: 0;
+}
+
+/* 删除table整个边框 */
+.ant-table-small.ant-table-bordered {
+  border-left: 0;
+}
+
+/* 只给table content 加边框 */
+.ant-table-small.ant-table-bordered .ant-table-content {
+  border: 1px solid #e8e8e8;
+}
+
+/* 修改 table title样式 */
+.ant-table-small.ant-table-bordered .ant-table-title {
+  margin-bottom: 10px;
+  background: rgb(230, 247, 255);
+  border: 1px solid #91d5ff;
+  border-radius: 5px;
+}
+
+/* 修改table背景颜色 */
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th {
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,34 @@
+variables:
+  APP_HOME: $DATA_DIR/www/console
+
+stages:
+- deploy
+
+before_script:
+- npm i -g yarn
+- yarn install
+- mkdir -p $RSA_DIR
+- chmod 700 $RSA_DIR && echo $PRK |base64 -d > $RSA_FILE && chmod 600 $RSA_FILE
+
+after_script:
+- rm -rf $RSA_DIR
+
+
+测试环境部署:
+  stage: deploy
+  only:
+  - beta
+  script:
+  - yarn beta
+  - ssh $SSH_ARGS $BETA_HOST "mkdir -p $APP_HOME"
+  - scp -r $SSH_ARGS build/app/* $BETA_HOST:$APP_HOME
+
+
+生产环境部署:
+  stage: deploy
+  only:
+  - master
+  script:
+  - yarn prod
+  - ssh $SSH_ARGS $PRODUCTION_HOST "mkdir -p $APP_HOME"
+  - scp -r $SSH_ARGS build/app/* $PRODUCTION_HOST:$APP_HOME

@@ -1,0 +1,10 @@
+// reset浏览器
+@import "~normalize.css/normalize.css";
+// 导入antd样式
+@import "~antd/dist/antd.min.css";
+// antd图表所需样式
+@import "~ant-design-pro/dist/ant-design-pro.css";
+// 覆盖antd样式
+@import "./theme";
+// 布局样式
+@import "layout";

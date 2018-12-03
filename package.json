@@ -1,0 +1,84 @@
+{
+  "private": true,
+  "name": "console-webapp",
+  "version": "1.0.0",
+  "description": "acquiring console webapp",
+  "main": "index.js",
+  "repository": "git@gitee.com:shangfu/cashier-web.git",
+  "author": "Sean",
+  "scripts": {
+    "dll": "arapp dll",
+    "start": "arapp serve",
+    "beta": "cross-env PROFILE=beta arapp bundle",
+    "prod": "cross-env PROFILE=production arapp bundle"
+  },
+  "dllEntry": {
+    "polyfill": [
+      "whatwg-fetch",
+      "es6-promise"
+    ],
+    "common": [
+      "history",
+      "object-path",
+      "classnames"
+    ],
+    "vendor": [
+      "react-redux",
+      "redux",
+      "redux-observable",
+      "react-router-dom"
+    ]
+  },
+  "devServer": {
+    "api": "http://192.168.88.15:6001",
+    "port": "8003"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@sitb/svg-icon": "^1.0.1",
+    "@sitb/wbs": "^1.0.107",
+    "ant-design-pro": "^2.1.1",
+    "antd": "^3.9.3",
+    "babel-polyfill": "^6.26.0",
+    "connected-react-router": "^4.5.0",
+    "es6-promise": "^4.2.5",
+    "history": "^4.7.2",
+    "moment": "^2.22.2",
+    "normalize.css": "^8.0.0",
+    "object-path": "^0.11.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-observable": "^1.0.0",
+    "rxjs": "6.3.3",
+    "veigar": "^1.0.0-Alpha.12"
+  },
+  "devDependencies": {
+    "@sitb/arapp-cli": "^1.0.0-Aplha.35",
+    "@types/node": "^10.11.3",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "autoprefixer": "^9.1.5",
+    "awesome-typescript-loader": "5.2.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "react-hot-loader": "4.3.11",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "typescript": "^3.1.1",
+    "url-loader": "^1.1.1"
+  }
+}
