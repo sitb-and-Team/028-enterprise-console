@@ -19,6 +19,14 @@ export function getOperator() {
   return null;
 }
 
+export function nowOperator(operator, merchantId) {
+  // 判断operator
+  const operators = (operator && Object.keys((operator.merchants).length !== 0)) && operator;
+  // 获取当前商户信息
+  return operators && operator.merchants.find(merchant => merchant.merchantNo === merchantId) || {};
+}
+
+
 /**
  * 获取当前操作员拥有的机构信息
  */
@@ -70,17 +78,17 @@ export function setAccessToken(accessToken: string) {
 }
 
 export function getAgencyId() {
-  return sessionStorage.getItem(SessionKey.agencyId) || '';
+  return sessionStorage.getItem(SessionKey.merchantId) || '';
 }
 
 export function setAgencyId(agencyId) {
-  return sessionStorage.setItem(SessionKey.agencyId, `${agencyId}`);
+  return sessionStorage.setItem(SessionKey.merchantId, `${agencyId}`);
 }
 
 
 // 清除当前选择的机构
 export function resetAgencyId() {
-  sessionStorage.removeItem(SessionKey.agencyId);
+  sessionStorage.removeItem(SessionKey.merchantId);
 }
 
 // 清除缓存
