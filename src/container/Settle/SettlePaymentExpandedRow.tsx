@@ -11,30 +11,30 @@ import GridViewUtil from '../../utils/GridViewUtil';
 
 export default settlePayment => {
   // 获取值
-  const normalFeeRateType = getObject.get(settlePayment, 'settlement.merchantBusiness.normalFeeRate.type');
-  const serviceFeeRateType = getObject.get(settlePayment, 'settlement.merchantBusiness.serviceFeeRate.type');
+  const normalFeeRateType = getObject.get(settlePayment, 'normalFeeRate.type');
+  const serviceFeeRateType = getObject.get(settlePayment, 'serviceFeeRate.type');
 
   const configs = {
     config: [{
       label: lang.normalFeeRate.value,
-      value: 'settlement.merchantBusiness.normalFeeRate.value',
+      value: 'normalFeeRate.value',
       type: normalFeeRateType
     }, {
       label: lang.normalFeeRate.min,
-      value: 'settlement.merchantBusiness.normalFeeRate.min',
+      value: 'normalFeeRate.min',
     }, {
       label: lang.normalFeeRate.max,
-      value: 'settlement.merchantBusiness.normalFeeRate.max',
+      value: 'normalFeeRate.max',
     }, {
       label: lang.serviceFeeRate.value,
-      value: 'settlement.merchantBusiness.normalFeeRate.value',
+      value: 'serviceFeeRate.value',
       type: serviceFeeRateType
     }, {
       label: lang.serviceFeeRate.min,
-      value: 'settlement.merchantBusiness.normalFeeRate.min'
+      value: 'serviceFeeRate.min'
     }, {
       label: lang.serviceFeeRate.min,
-      value: 'settlement.merchantBusiness.normalFeeRate.max'
+      value: 'serviceFeeRate.max'
     }]
   };
   const data: GridInfoProps = {
