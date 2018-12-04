@@ -1,9 +1,8 @@
 import * as React from 'react';
-import {lang} from '../../locale';
-import {TradeStatusOptions} from '../../constants/selectObj/TradeStatus';
-import {BusinessTypeData} from '../../constants/BusinessType';
-import {ChannelSelect} from '../../component/Tool/ChannelSelect';
-import {AgencySelect} from "../../component/Tool/AgencySelect";
+import { lang } from '../../locale';
+import { TradeStatusOptions } from '../../constants/selectObj/TradeStatus';
+import { BusinessTypeData } from '../../constants/BusinessType';
+import { ChannelSelect } from '../../component/Tool/ChannelSelect';
 
 /**
  * Copyright: Copyright (C) 2018 sitb.software,All Rights Reserved
@@ -14,31 +13,17 @@ import {AgencySelect} from "../../component/Tool/AgencySelect";
 // 交易搜索表单
 export const tradeSearch: any = [{
   fields: [{
-    label: lang.agency.path,
-    name: 'path',
-    render: () => <AgencySelect getValue={(({path}) => `${path}`)}/>
-  }, {
     label: lang.businessType,
     name: 'businessTypes',
     type: 'select',
     options: BusinessTypeData
-  }, {
-    label: lang.merchant.number,
-    name: 'merchantNo'
-  }, {
-    label: lang.merchant.name,
-    name: 'merchantName'
-  }, {
-    label: lang.channelFlag,
-    name: 'channelFlag',
-    render: () => <ChannelSelect/>
   }, {
     label: lang.agencyProfit.totalAmount,
     name: 'totalAmount'
   }, {
     label: lang.payment.serialNumber,
     name: 'serialNumber',
-    maxLength:35,
+    maxLength: 35,
   }, {
     label: lang.status,
     name: 'status',
