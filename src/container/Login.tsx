@@ -18,7 +18,7 @@ import URL from '../constants/URL';
 const {Header, Content, Footer} = Layout;
 
 @connect(({session, login}) => ({
-  agencies: session.agencies,
+  agencies: session.merchants.merchants,
   processing: login.processing,
   submitProcessing: login.submitProcessing
 }))
