@@ -19,108 +19,20 @@ export const menus: Array<Menu> = [{
   path: routerPath.dashboard,
   icon: 'dashboard'
 }, {
-  name: menu.channel,
-  path: routerPath.channel,
-  icon: 'barcode',
-  children: [{
-    //   name: menu.channelBusiness,
-    //   path: routerPath.channelBusiness,
-    //   permission: permission.channelsBusiness.query
-    // }, {
-    name: menu.merchant,
-    path: routerPath.channelMerchant,
-    permission: permission.channelMerchant.query
-  }, {
-    name: menu.config,
-    path: routerPath.channelConfig,
-    permission: permission.channelConfig.query
-  }]
-}, {
-  name: menu.agency,
-  path: routerPath.agency,
-  icon: 'bank',
-  children: [{
-    name: menu.agency,
-    path: routerPath.agency,
-    permission: permission.agency.query
-  }, {
-    //   name: menu.config,
-    //   path: routerPath.agencyConfig,
-    //   permission: permission.agencyConfig.query
-    // }, {
-    name: menu.agencyProfit,
-    path: routerPath.agencyProfit,
-    permission: permission.agencyProfit.queryProfit
-  }]
-}, {
   name: menu.merchant,
   path: routerPath.merchant,
   icon: 'shop',
-  children: [{
-    name: menu.merchant,
-    path: routerPath.merchant,
-    permission: permission.merchant.query
-  }, {
-    name: menu.merchantReview,
-    path: routerPath.merchantReview,
-    permission: permission.merchantReView.query
-  }, {
-    name: menu.merchantBusinessReview,
-    path: routerPath.merchantBusinessReview,
-    permission: permission.merchantBusinessReview.query
-  }]
-}, {
-  name: menu.riskControl,
-  path: routerPath.riskControl,
-  icon: 'control',
-  children: [{
-    name: menu.controlMerchantLimits,
-    path: routerPath.controlMerchantLimits,
-    permission: permission.controlMerchantLimits.query
-  }, {
-    name: menu.cushionQuotManagement,
-    path: routerPath.cushionQuotManagement,
-    permission: permission.cushionQuotManagement.query
-  }]
+  permission: permission.merchant.query
 }, {
   name: menu.paymentTrade,
-  path: routerPath.payment,
+  path: routerPath.paymentTrade,
   icon: 'profile',
-  children: [{
-    name: menu.paymentTrade,
-    path: routerPath.paymentTrade,
-    permission: permission.paymentTrade.query
-  }, {
-    name: menu.paymentRoute,
-    path: routerPath.paymentRoute,
-    permission: permission.paymentRoute.query
-  }]
+  permission: permission.paymentTrade.query
 }, {
   name: menu.settlement,
   path: routerPath.settlePayment,
   icon: 'pay-circle-o',
-  children: [{
-    name: menu.settlePayment,
-    path: routerPath.settlePayment,
-    permission: permission.paymentSettle.query
-  }, {
-    name: menu.settleTask,
-    path: routerPath.settleTask,
-    permission: permission.settleTask.query
-  }, {
-    name: menu.settleReconciliationTask,
-    path: routerPath.settleReconciliationTask,
-    permission: permission.settleReconciliationTask.query
-  }]
-}, {
-  name: menu.template,
-  path: routerPath.rateTemplate,
-  icon: 'copy',
-  children: [{
-    name: menu.rateTemplate,
-    path: routerPath.rateTemplate,
-    permission: permission.rateTemplate.query
-  }]
+  permission: permission.paymentSettle.query
 }, {
   name: menu.system,
   path: routerPath.system,
