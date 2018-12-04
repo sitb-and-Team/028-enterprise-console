@@ -1,20 +1,5 @@
 import { Dashboard } from '../container/Dashboard';
 
-import { ChannelConfig } from '../container/Channel/Config';
-import { ChannelBusiness } from '../container/Channel/ChannelBusiness';
-import { ChannelBusinessPersist } from '../container/Channel/PersistChannelBusiness';
-import { ChannelMerchant } from '../container/Channel/Merchant';
-import { ChannelMerchantPersist } from '../container/Channel/ChannelMerchantPersist';
-import { ChannelMerchantBusiness } from '../container/Channel/MerchantBusiness';
-import { ChannelMerchantBusinessPersist } from '../container/Channel/MerchantBusinessCreate';
-
-import { Agency } from '../container/Agency/Agency';
-import { AgencyPersist } from '../container/Agency/PersistAgency';
-import { AgencyBusiness } from '../container/Agency/Business';
-import { AgencyBusinessPersist } from '../container/Agency/PersistBusiness';
-import { AgencyConfig } from '../container/Agency/Config';
-import { AgencyProfit } from '../container/Agency/Profit';
-
 import { MerchantQuery } from '../container/Merchant/Merchant';
 import { MerchantPersist } from '../container/Merchant/PersistMerchant';
 import { MerchantBusiness } from '../container/Merchant/MerchantBusiness';
@@ -49,46 +34,12 @@ import { SystemProcessPersist } from '../container/System/PersistSystemProcess';
 
 import { menu } from '../locale';
 import { ProfileIndex } from '../container/Profile';
-import { RateTemplate } from '../container/Template/RateTemplate';
-import { PersistRateTemplate } from '../container/Template/PersistRateTemplate';
-
-import { CushionQuotManagement } from '../container/RiskControl/CushionQuotManagement';
-import { PersistCushionQuotManagement } from '../container/RiskControl/PersistCushionQuotManagement'
-
-import { ControlMerchantLimits } from '../container/RiskControl/ControlMerchantLimits';
-import { PersistControlMerchantLimits } from "../container/RiskControl/PersistControlMerchantLimits";
 
 
 
 // 路由path
 export const routerPath = {
   dashboard: '/dashboard',
-
-  channel: '/channel',
-  channelBusiness: '/channel-business',
-  channelBusinessPersist: '/channel-business/persist/:type',
-  channelBusinessCreate: '/channel-business/persist/create',
-  channelBusinessUpdate: '/channel-business/persist/update',
-  channelMerchant: '/channel-merchant',
-  channelMerchantPersist: '/channel-merchant/persist/:type',
-  channelMerchantCreate: '/channel-merchant/persist/create',
-  channelMerchantUpdate: '/channel-merchant/persist/update',
-  channelMerchantBusiness: '/channel-merchant/business',
-  channelMerchantBusinessPersist: '/channel-merchant/business/persist/:type',
-  channelMerchantBusinessCreate: '/channel-merchant/business/persist/create',
-  channelMerchantBusinessUpdate: '/channel-merchant/business/persist/update',
-  channelConfig: '/channel-config',
-
-  agency: '/agency',
-  agencyPersist: '/agency/persist/:type',
-  agencyCreate: '/agency/persist/create',
-  agencyUpdate: '/agency/persist/update',
-  agencyBusiness: '/agency/business',
-  agencyBusinessPersist: '/agency/business/persist/:type',
-  agencyBusinessCreate: '/agency/business/persist/create',
-  agencyBusinessUpdate: '/agency/business/persist/update',
-  agencyConfig: '/agency-config',
-  agencyProfit: '/agency-profit',
 
   merchant: '/merchant',
   merchantPersist: '/merchant/persist/:type',
@@ -163,26 +114,6 @@ export const routerPath = {
 
 // 面包屑 路由配置
 export const breadcrumbNameMap = {
-  [routerPath.channelConfig]: menu.channelConfig,
-  [routerPath.channel]: menu.channel,
-  [routerPath.channelBusiness]: menu.channelBusiness,
-  [routerPath.channelBusinessCreate]: menu.channelBusinessCreate,
-  [routerPath.channelBusinessUpdate]: menu.channelBusinessUpdate,
-  [routerPath.channelMerchant]: menu.channelMerchant,
-  [routerPath.channelMerchantCreate]: menu.channelMerchantCreate,
-  [routerPath.channelMerchantUpdate]: menu.channelMerchantUpdate,
-  [routerPath.channelMerchantBusiness]: menu.channelMerchantBusiness,
-  [routerPath.channelMerchantBusinessCreate]: menu.channelMerchantBusinessCreate,
-  [routerPath.channelMerchantBusinessUpdate]: menu.channelMerchantBusinessUpdate,
-
-  [routerPath.agency]: menu.agency,
-  [routerPath.agencyCreate]: menu.agencyCreate,
-  [routerPath.agencyUpdate]: menu.agencyUpdate,
-  [routerPath.agencyBusiness]: menu.agencyBusiness,
-  [routerPath.agencyBusinessCreate]: menu.agencyBusinessCreate,
-  [routerPath.agencyBusinessUpdate]: menu.agencyBusinessUpdate,
-  [routerPath.agencyConfig]: menu.agencyConfig,
-  [routerPath.agencyProfit]: menu.agencyProfit,
 
   [routerPath.merchant]: menu.merchant,
   [routerPath.merchantCreate]: menu.merchantCreate,
@@ -223,10 +154,6 @@ export const breadcrumbNameMap = {
   [routerPath.systemProcessCreate]: menu.systemProcessCreate,
   [routerPath.systemProcessUpdate]: menu.systemProcessUpdate,
 
-  [routerPath.rateTemplate]: menu.rateTemplate,
-  [routerPath.rateTemplateCreate]: menu.rateTemplateCreate,
-  [routerPath.rateTemplateUpdate]: menu.rateTemplateUpdate,
-
   [routerPath.profile]: menu.profile,
 
   [routerPath.controlMerchantLimits]: menu.controlMerchantLimits,
@@ -242,45 +169,6 @@ export const breadcrumbNameMap = {
 export default [{
   path: routerPath.dashboard,
   component: Dashboard
-}, {
-  path: routerPath.channelConfig,
-  component: ChannelConfig
-}, {
-  path: routerPath.channelBusiness,
-  component: ChannelBusiness
-}, {
-  path: routerPath.channelBusinessPersist,
-  component: ChannelBusinessPersist
-}, {
-  path: routerPath.channelMerchant,
-  component: ChannelMerchant
-}, {
-  path: routerPath.channelMerchantPersist,
-  component: ChannelMerchantPersist
-}, {
-  path: routerPath.channelMerchantBusiness,
-  component: ChannelMerchantBusiness
-}, {
-  path: routerPath.channelMerchantBusinessPersist,
-  component: ChannelMerchantBusinessPersist
-}, {
-  path: routerPath.agency,
-  component: Agency
-}, {
-  path: routerPath.agencyPersist,
-  component: AgencyPersist
-}, {
-  path: routerPath.agencyBusiness,
-  component: AgencyBusiness
-}, {
-  path: routerPath.agencyBusinessPersist,
-  component: AgencyBusinessPersist
-}, {
-  path: routerPath.agencyConfig,
-  component: AgencyConfig
-}, {
-  path: routerPath.agencyProfit,
-  component: AgencyProfit
 }, {
   path: routerPath.merchant,
   component: MerchantQuery
@@ -366,24 +254,6 @@ export default [{
   path: routerPath.systemProcessPersist,
   component: SystemProcessPersist
 }, {
-  path: routerPath.rateTemplate,
-  component: RateTemplate
-}, {
-  path: routerPath.rateTemplatePersist,
-  component: PersistRateTemplate
-}, {
   path: routerPath.profile,
   component: ProfileIndex
-}, {
-  path: routerPath.controlMerchantLimits,
-  component: ControlMerchantLimits
-}, {
-  path: routerPath.cushionQuotManagement,
-  component: CushionQuotManagement
-}, {
-  path: routerPath.cushionQuotManagementPersist,
-  component: PersistCushionQuotManagement
-}, {
-  path: routerPath.PersistControlMerchantLimits,
-  component: PersistControlMerchantLimits
-},];
+}];
