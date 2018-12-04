@@ -42,7 +42,11 @@ export const TradeStatus = {
   /**
    * 部分退货
    */
-  refundedPart: 'REFUNDED_PART'
+  refundedPart: 'REFUNDED_PART',
+  /**
+   * 已全额退款
+   */
+  fullRefund: 'FULLREFUND'
 };
 
 export const TradeStatusOptions = {
@@ -53,5 +57,6 @@ export const TradeStatusOptions = {
   [TradeStatus.cancelled]: lang.payment.cancelled,
   [TradeStatus.delete]: lang.delete,
   [TradeStatus.refunded]: lang.payment.refunded,
-  [TradeStatus.refundedPart]: lang.payment.refundedPart
+  [TradeStatus.refundedPart]: lang.payment.refundedPart,
+  [TradeStatus.fullRefund]: lang.payment.fullRefund
 };
