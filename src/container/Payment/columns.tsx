@@ -16,18 +16,14 @@ import { MerchantSelectModeOptions } from '../../constants/selectObj/MerchantSel
 
 // 交易columns
 export const paymentTradeColumns = [{
-  title: lang.agency.info,
-  dataIndex: 'agency',
-  render: agency => agency && `${agency.code}-${agency.name}`
-}, {
   title: lang.merchant.number,
-  dataIndex: 'merchant.merchantNo'
-}, {
-  title: lang.merchant.name,
-  dataIndex: 'merchant.merchantName'
+  dataIndex: 'merchantNo'
 }, {
   title: lang.payment.auditNumber,
   dataIndex: 'auditNumber'
+}, {
+  title: lang.channelMerchant.no,
+  dataIndex: 'channelMerchantNo'
 }, {
   title: lang.businessType,
   dataIndex: 'businessType',
@@ -36,8 +32,8 @@ export const paymentTradeColumns = [{
   title: lang.agencyProfit.totalAmount,
   dataIndex: 'totalAmount'
 }, {
-  title: lang.describe,
-  dataIndex: 'describe'
+  title: lang.agencyProfit.refundAmount,
+  dataIndex: 'refundAmount'
 }, {
   title: lang.status,
   dataIndex: 'status',
@@ -56,6 +52,9 @@ export const paymentTradeColumns = [{
   title: lang.createAt,
   dataIndex: 'createAt',
   type: ColumnType.DATE_TIME
+}, {
+  title: lang.describe,
+  dataIndex: 'describe'
 }];
 
 
@@ -83,3 +82,6 @@ export const paymentRouteColumns = [{
   title: lang.describe,
   dataIndex: 'describe'
 }];
+
+
+
