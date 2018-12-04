@@ -315,7 +315,9 @@ export const lang = {
     title: '机构业务信息'
   },
   agencyProfit: {
-    totalAmount: '交易金额'
+    totalAmount: '交易金额',
+    refundAmount: '已经退货金额',
+    fullRefund: '已全额退款'
   },
   channelMerchant: {
     title: '通道商户信息',
@@ -553,6 +555,7 @@ export const lang = {
     payment: '生成结算信息',
     viewSettle: '查看结算信息',
     auditNumber: '系统流水号',
+    channelMerchantNo: '渠道商户号',
     serialNumber: '流水号',
     agencyAuditNumber: '下游流水号',
     responseCode: '响应代码',
@@ -561,6 +564,8 @@ export const lang = {
     address: '交易地址',
     cancelled: '交易已撤销',
     refunded: '交易全额退货',
+    refundAmount: '已经退货金额',
+    fullRefund: '已全额退款',
     refundedPart: '交易部分退货'
   },
   paymentRoute: {
@@ -759,7 +764,7 @@ export const menu = {
   merchantTemplate: '商户模版管理',
 
   config: '参数配置',
-  settlement: '清分清算',
+  settlement: '结算帐单',
   settleTask: '出款任务',
   settleDetails: '任务明细',
   settleTradeDetails: '出款明细',
