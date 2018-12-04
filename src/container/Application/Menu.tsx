@@ -54,7 +54,7 @@ export default class Menu extends React.Component<Props, State> {
           ...styles.default.menuLogo,
           ...styles.default.menuLogoMode
         }}>
-          {'收单管理平台'}
+          {'商戶平台'}
         </div>
         <ANTDMenu defaultOpenKeys={defaultOpenKeys}
                   defaultSelectedKeys={['1']}
