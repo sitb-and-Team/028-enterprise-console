@@ -28,8 +28,7 @@ export const merchantSearch = [{
   isSearch: true,
   fields: [{
     name: 'agencyId',
-    label: lang.agency.id,
-    render: () => <AgencySelect/>
+    label: lang.agency.id
   }, {
     name: 'nameOrNo',
     label: lang.merchant.info
