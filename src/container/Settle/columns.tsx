@@ -15,6 +15,7 @@ import { SettleProcessingModeOptions } from '../../constants/selectObj/SettlePro
 import { SettleTaskStageOptions } from '../../constants/selectObj/SettleTaskStage';
 import { BusinessTypeData } from '../../constants/BusinessType';
 import { SettleTradeDetailStatusOptions } from '../../constants/selectObj/SettleTrandDetailStatus';
+import { MerchantSettleTypeOptions } from '../../constants/selectObj/MerchantSettleType';
 
 /**
  * Copyright: Copyright (C) 2018 sitb.software,All Rights Reserved
@@ -25,20 +26,11 @@ import { SettleTradeDetailStatusOptions } from '../../constants/selectObj/Settle
 // 清算出款columns
 export const settlePaymentColumns = [{
   title: lang.merchant.info,
-  dataIndex: 'paymentRecord.merchant',
+  dataIndex: 'merchant',
   render: (merchant) => merchant && `${merchant.merchantNo}-${merchant.merchantName}`
-}, {
-  title: lang.settle.channelFlag,
-  dataIndex: 'channelFlag'
-}, {
-  title: lang.settle.batchNumber,
-  dataIndex: 'batchNumber'
 }, {
   title: lang.settle.auditNumber,
   dataIndex: 'auditNumber'
-}, {
-  title: lang.settle.paymentTradeRecord,
-  dataIndex: 'paymentRecord.auditNumber'
 }, {
   title: lang.settle.totalAmount,
   dataIndex: 'totalAmount',
@@ -53,12 +45,12 @@ export const settlePaymentColumns = [{
   dataIndex: 'settleAmount'
 }, {
   title: lang.settle.settleMethod,
-  dataIndex: 'settleCycle',
-  render: settleCycle => settleCycle && MerchantFeeSettleCycleOptions[settleCycle]
+  dataIndex: 'settleType',
+  render: settleType => settleType && MerchantSettleTypeOptions[settleType]
 }, {
   title: lang.settle.channelSettleMethod,
-  dataIndex: 'channelSettleCycle',
-  render: channelSettleCycle => channelSettleCycle && MerchantFeeSettleCycleOptions[channelSettleCycle]
+  dataIndex: 'settleCycle',
+  render: settleCycle => settleCycle && MerchantFeeSettleCycleOptions[settleCycle]
 }, {
   title: lang.status,
   dataIndex: 'status',
@@ -66,9 +58,6 @@ export const settlePaymentColumns = [{
   getBadgeProps: (status) => ({
     text: SettleStatusOptions[status]
   })
-}, {
-  title: lang.describe,
-  dataIndex: 'describe'
 }, {
   title: lang.settleAt,
   dataIndex: 'settleAt',
@@ -78,8 +67,8 @@ export const settlePaymentColumns = [{
   dataIndex: 'paymentRecord.paymentAt',
   type: ColumnType.DATE_TIME
 }, {
-  title: lang.remark,
-  dataIndex: 'remark'
+  title: lang.describe,
+  dataIndex: 'describe'
 }];
 
 /**
