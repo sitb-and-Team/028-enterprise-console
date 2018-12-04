@@ -4,10 +4,10 @@
  * date: 2018/6/14
  */
 export default {
-  loginOperator: 'ACQUIRING_LOGIN_USER',
-  accessToken: 'ACQUIRING_ACCESS_TOKEN',
+  loginOperator: 'PUFA_MOBILE_LOGIN_USER',
+  accessToken: 'PUFA_MOBILE_MERCHANT_TOKEN',
   /**
    * 当前选择的机构信息
    */
-  agencyId: 'ACQUIRING_AGENCY_ID'
+  merchantId: 'PUFA_MOBILE_MERCHANT_ID'
 };
