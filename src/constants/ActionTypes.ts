@@ -223,7 +223,12 @@ export const paymentTrade = create('payment-trade', {
    * 生成结算信息
    */
   startCreateSettle: '',
-  createSelectComplete: ''
+  createSelectComplete: '',
+  /**
+   * 搜索統計信息
+   */
+  searchStats: '',
+  searchStatsComplete: ''
 });
 
 // 交易路由
