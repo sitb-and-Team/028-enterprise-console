@@ -17,7 +17,6 @@ import { lang } from '../../locale';
 import { Form as ANTDForm, message } from 'antd';
 import RateTemplateSelect from '../../component/Tool/RateTemplateSelect';
 import ReviewUtils from '../../utils/ReviewUtils';
-import { posTemplateFields } from '../Template/fields';
 import StringUtil from '../../utils/StringUtil';
 
 // 需要跳过，需要检查的字段
@@ -169,8 +168,6 @@ export class Component extends React.Component<any, any> {
     // 当type为post时新增表单组
     if (businessType.search('POS') !== -1) {
       isRequiredNormal = false;
-      newFieldGroups = [...this.judgementField({setFields: posTemplateFields(true)})];
-      console.log(posTemplateFields(true));
     }
     this.setState({businessType, isRequiredNormal, fieldGroups: newFieldGroups});
   }
