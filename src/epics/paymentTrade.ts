@@ -114,3 +114,18 @@ export function startObserved(action$) {
     tap(actionToast({prefix: 'paymentTrade'}))
   );
 }
+
+/**
+ * 查看统计信息
+ * @param action$
+ */
+export function searchStats(action$) {
+  return action$.pipe(
+    ofType(types.searchStats),
+    switchMap(() => execute({
+        url: `${URL.paymentTrade}/stats`,
+        type: types.searchStatsComplete
+      })
+    )
+  )
+}
