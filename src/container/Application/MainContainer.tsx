@@ -7,14 +7,13 @@ import * as styles from '../../styles/application';
 import * as React from 'react';
 import { Layout } from 'antd';
 import { withRouter } from 'react-router-dom';
-import hasPermission, { setPermissions } from '@sitb/wbs/utils/hasPermission';
+import { setPermissions } from '@sitb/wbs/utils/hasPermission';
 import { getAgencyRules } from '../../core/SessionServices';
 
 import { getActions } from '../../core/store'
 import Content from './Content';
 import Header from './Header';
 import Menu from './Menu';
-import { permission } from '../../constants/Permissions';
 
 const {Sider, Footer} = Layout;
 
@@ -33,14 +32,6 @@ export default class MainContainer extends React.Component<any> {
   }
 
   componentDidMount() {
-    // 获取通道标识
-    if (hasPermission(permission.channel.query)) {
-      getActions().channel.startChannels();
-    }
-    if (hasPermission(permission.systemAgency.children)) {
-      // 获取下级机构
-      getActions().session.getChildrenAgency();
-    }
     const {pathname} = this.props.location;
     if (pathname === '/') {
       getActions().navigator.replace('dashboard');
