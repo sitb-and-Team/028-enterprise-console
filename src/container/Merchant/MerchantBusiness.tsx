@@ -15,11 +15,7 @@ import { QueryContainer } from '../../component/QueryContainer';
 import TotalUtil from '../../component/DataGrid/TotalUtil';
 import ObjectUtil from '../../utils/ObjectUtil';
 import objectPath from 'object-path';
-import { Form as ANTDForm, Tabs, message } from "antd";
-import { createTabs } from "../Agency/Business";
-import { lang } from "../../locale";
-import { objectPathGet } from "../../component/Tool/GridInfoUtil";
-import { infoConfig } from './expandedRow';
+import { Form as ANTDForm, message } from "antd";
 import {PopInput} from "../../component/Popover/PopInput";
 
 
@@ -41,6 +37,7 @@ class Component extends React.Component<any, any> {
       return;
     }
     this.onSearch(params);
+
   }
 
   /**
@@ -130,12 +127,8 @@ class Component extends React.Component<any, any> {
       merchantId: params.id,
       agency: params.agency
     } || {};
-    const title = `${lang.agency.info}: ${objectPathGet(params, 'agency.code')}-${objectPathGet(params, 'agency.name')}`;
     return (
       <React.Fragment>
-        <Tabs>
-          {createTabs(infoConfig, params, title)}
-        </Tabs>
         <QueryContainer buttonGroups={record => this.buttonGroupsConfig(record)}
                         ANTDForm={form}
                         title={() => (<TotalUtil total={page.content.length}/>)}
