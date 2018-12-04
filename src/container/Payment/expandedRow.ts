@@ -14,9 +14,6 @@ export const tradeExpandedRowConfig: GridInfoProps = {
     label: lang.channelFlag,
     value: 'channelFlag'
   }, {
-    label: lang.channelMerchant.no,
-    value: 'channelMerchantNo'
-  }, {
     label: lang.channelMerchant.number,
     value: 'channelAuditNumber'
   }, {
@@ -32,14 +29,5 @@ export const tradeExpandedRowConfig: GridInfoProps = {
   }, {
     label: lang.payment.responseMsg,
     value: 'responseMsg'
-  }, {
-    label: lang.payment.deviceInfo,
-    value: 'device'
-  }, {
-    label: lang.address,
-    value: 'address'
-  }, {
-    label: lang.remark,
-    value: 'describe'
   }]
 };
